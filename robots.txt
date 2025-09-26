@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ksharmila17.github.io/sitemap.xml
