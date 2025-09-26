@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sharmila Krishnakumar — GenAI • .NET • Angular (Independent Consultant)</title>
-  <meta name="description" content="Independent Consultant helping Support & Procurement teams ship GenAI pilots in 3–4 weeks (citations, guardrails, KPIs). .NET 8, Angular 17, Azure." />
+  <title>Sharmila Krishnakumar — GenAI • .NET • Angular • Azure (Independent Consultant)</title>
+  <meta name="description" content="Independent Consultant helping Support & Procurement teams ship GenAI pilots in 3–4 weeks (citations, guardrails, KPIs). Full-stack .NET + Angular, Azure native." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://ksharmila17.github.io/" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sharmila Krishnakumar — GenAI • .NET • Angular (Independent Consultant)">
-  <meta property="og:description" content="GenAI pilots in 3–4 weeks for Support & Procurement. Citations, guardrails, KPIs. .NET 8, Angular 17, Azure.">
+  <meta property="og:title" content="Sharmila Krishnakumar — GenAI • .NET • Angular • Azure">
+  <meta property="og:description" content="GenAI pilots in 3–4 weeks • citations • guardrails • KPIs • Full-stack .NET + Angular on Azure.">
   <meta property="og:url" content="https://ksharmila17.github.io/">
-  <meta property="og:site_name" content="Sharmila Krishnakumar">
+  <meta property="og:image" content="https://ksharmila17.github.io/og-card.svg">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- JSON-LD Person schema -->
@@ -22,66 +22,116 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sharmila Krishnakumar",
-    "jobTitle": "Independent Consultant (GenAI • .NET • Angular)",
+    "jobTitle": "Independent Consultant — GenAI • .NET • Angular • Azure",
     "url": "https://ksharmila17.github.io/",
     "sameAs": [
-      "https://www.linkedin.com/in/sharmila-krishnakumar-176b3919",
-      "https://github.com/ksharmila17"
+      "https://www.linkedin.com/in/sharmila-krishnakumar-176b3919"
     ],
-    "knowsAbout": ["Generative AI","RAG","Customer Support","Procurement","Vendor Discovery","ASP.NET","Angular","Azure"]
+    "knowsAbout": ["Generative AI","RAG","Customer Support","Procurement","Vendor Discovery","ASP.NET",".NET 8","Angular 17","Azure"]
   }
   </script>
 
   <style>
     :root{
-      --bg:#0b0f14; --card:#111824; --muted:#9bb3c9; --text:#e6f0ff; --accent:#5ec2ff; --accent2:#00d4ae;
+      --bg:#0b0f14; --card:#0f1722; --muted:#97adc4; --text:#e6f0ff;
+      --border:#1c2a3a; --accent:#6bdcff; --accent2:#00d4ae;
+    }
+    :root.light{
+      --bg:#f6f9fd; --card:#ffffff; --muted:#4a5a6a; --text:#0a1623;
+      --border:#d6e0ea; --accent:#0066ff; --accent2:#00b894;
     }
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
-      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      color:var(--text); background: radial-gradient(1200px 800px at 20% -10%, #0f172a 0%, #0b0f14 55%);
-      line-height:1.5;
+      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text); background: var(--bg);
+      line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
-    header{padding:64px 20px 28px; max-width:980px; margin:0 auto;}
-    .badge{display:inline-block; padding:4px 10px; border:1px solid #203247; border-radius:999px; color:var(--muted); font-size:12px; letter-spacing:.3px}
-    h1{margin:14px 0 10px; font-size:38px; line-height:1.1}
-    .sub{color:var(--muted); font-size:18px; max-width:840px}
-    .cta{margin-top:18px; display:flex; gap:12px; flex-wrap:wrap}
+    a{color:var(--accent)}
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+    .skip{position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden}
+    .skip:focus{left:16px; top:16px; width:auto; height:auto; background:#000; color:#fff; padding:8px 12px; border-radius:8px}
+
+    header{padding:36px 0 10px; border-bottom:1px solid var(--border); background:
+      radial-gradient(1200px 600px at 5% -10%, rgba(255,255,255,.04), transparent 60%);}
+    nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{display:flex; gap:10px; align-items:center}
+    .badge{display:inline-block; padding:4px 10px; border:1px solid var(--border); border-radius:999px; color:var(--muted); font-size:12px; letter-spacing:.3px}
+    .toggle{border:1px solid var(--border); background:transparent; color:var(--text); padding:6px 10px; border-radius:10px; cursor:pointer}
+
+    .hero{padding:20px 0 8px}
+    h1{margin:8px 0 8px; font-size:40px; line-height:1.1}
+    .lead{color:var(--muted); font-size:18px; max-width:880px}
+    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .chip{border:1px solid var(--border); padding:6px 10px; border-radius:999px; color:var(--muted); font-size:12px}
+
+    .cta{margin:18px 0 6px; display:flex; gap:12px; flex-wrap:wrap}
     .btn{background:linear-gradient(90deg, var(--accent), var(--accent2)); color:#001018; padding:10px 16px; border-radius:12px; text-decoration:none; font-weight:600}
-    .btn.outline{background:transparent; color:var(--text); border:1px solid #284058}
-    main{max-width:980px; margin:20px auto 80px; padding:0 20px; display:grid; gap:24px}
-    section{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid #22324a; border-radius:16px; padding:22px}
+    .btn.outline{background:transparent; color:var(--text); border:1px solid var(--border)}
+
+    main{padding:28px 0 80px; display:grid; gap:26px}
+    section{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--border); border-radius:16px; padding:22px}
     h2{margin:6px 0 8px; font-size:22px}
     h3{margin:12px 0 6px; font-size:18px}
     ul{margin:8px 0 0 20px}
     li{margin:6px 0}
-    code{background:#0b1420; padding:2px 6px; border-radius:6px; border:1px solid #1a2a40}
-    footer{max-width:980px; margin:0 auto 40px; padding:0 20px; color:#8ca4ba; font-size:14px}
-    .two{display:grid; grid-template-columns: 1fr; gap:16px}
-    @media (min-width: 820px){ .two{grid-template-columns: 1fr 1fr} }
+    .grid-2{display:grid; grid-template-columns:1fr; gap:16px}
+    @media (min-width: 860px){ .grid-2{grid-template-columns: 1fr 1fr} }
     .muted{color:var(--muted)}
+    .card{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px}
+    .faq details{border:1px solid var(--border); border-radius:10px; padding:12px 14px; background:var(--card)}
+    .faq details+details{margin-top:10px}
+    .faq summary{cursor:pointer; font-weight:600}
+    footer{border-top:1px solid var(--border); padding:18px 0; color:var(--muted); font-size:14px}
+
+    /* Contact reveal */
+    .contact-row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .pill{display:inline-flex; align-items:center; gap:8px; border:1px dashed var(--border); padding:8px 12px; border-radius:999px}
+    .copy{border:1px solid var(--border); background:transparent; color:var(--text); border-radius:10px; padding:6px 10px; cursor:pointer}
+    .projects .p{margin-bottom:14px}
   </style>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header>
-    <span class="badge">Independent Consultant — GenAI • .NET • Angular</span>
-    <h1>Sharmila Krishnakumar</h1>
-    <p class="sub">
-      I help <strong>Support</strong> and <strong>Procurement</strong> teams ship GenAI assistants in <strong>3–4 weeks</strong> — with
-      <strong>citations</strong>, <strong>guardrails</strong>, and <strong>measurable KPIs</strong>. Typical outcomes: AHT ↓ 15–25%,
-      200+ vendors shortlisted in weeks.
-    </p>
-    <div class="cta">
-      <a class="btn" href="mailto:you@example.com">Email me</a>
-      <a class="btn outline" href="https://calendly.com/<your-handle>/20min" target="_blank" rel="noopener">Book a 20‑min discovery</a>
-      <a class="btn outline" href="https://www.linkedin.com/in/sharmila-krishnakumar-176b3919" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand">
+          <span class="badge">Independent Consultant — GenAI • .NET • Angular • Azure</span>
+        </div>
+        <button class="toggle" id="modeToggle" aria-label="Toggle color theme">☀︎/☾</button>
+      </nav>
+
+      <div class="hero" role="banner">
+        <h1>Sharmila Krishnakumar</h1>
+        <p class="lead">
+          I help <strong>Support</strong> and <strong>Procurement</strong> teams ship GenAI assistants in <strong>3–4 weeks</strong> — with
+          <strong>citations</strong>, <strong>guardrails</strong>, and <strong>measurable KPIs</strong>. Typical outcomes: AHT ↓ 15–25%,
+          200+ vendors shortlisted in weeks.
+        </p>
+        <div class="cta" role="group" aria-label="Primary actions">
+          <a class="btn" id="emailBtn" href="#" rel="nofollow">Email me</a>
+          <a class="btn outline" href="https://www.linkedin.com/in/sharmila-krishnakumar-176b3919" target="_blank" rel="me noopener">LinkedIn</a>
+          <a class="btn outline" id="whatsBtn" href="#" rel="nofollow">WhatsApp</a>
+        </div>
+        <div class="chips" aria-label="Proof metrics">
+          <span class="chip">Citations-on answers</span>
+          <span class="chip">BYO-key & allow-lists</span>
+          <span class="chip">Audit logs + PII redaction</span>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Productized Pilots (fixed‑scope, 3–4 weeks)</h2>
-      <div class="two">
+  <main id="main" class="container">
+    <section class="card">
+      <h2>About</h2>
+      <p class="muted">Solutions architect with 16 years in .NET and Azure, now focused on shipping secure GenAI features fast—RAG with citations, ticket summarization, and sourcing automation—on a clean .NET + Angular stack.</p>
+    </section>
+
+    <section class="card">
+      <h2>Productized Pilots (fixed-scope, 3–4 weeks)</h2>
+      <div class="grid-2">
         <div>
           <h3>Support/ITSM Copilot</h3>
           <p class="muted">Answers with citations, ticket summaries, reply drafts (tone & policy safe).</p>
@@ -105,35 +155,112 @@
       </div>
     </section>
 
-    <section>
-      <h2>Proof (why teams pick me)</h2>
-      <ul>
-        <li><strong>Fast pilots</strong>: 3–4 weeks to a working feature with clear acceptance tests.</li>
-        <li><strong>Enterprise‑safe</strong>: BYO‑key, domain allow‑lists, PII redaction, audit logs, rate limits.</li>
-        <li><strong>Measurable outcomes</strong>: AHT ↓ 15–25%; sourcing hours ↓ 60–70%; latency p95 &lt; 2.5s (cached).</li>
-      </ul>
+    <section class="card projects">
+      <h2>Featured Projects</h2>
+      <div class="p">
+        <h3>KPMG Learning Registration Portals</h3>
+        <p class="muted">Registration portals & dashboards; Azure DevOps workflows; Angular + .NET Web API.</p>
+      </div>
+      <div class="p">
+        <h3>SIRVA Connect+ Employee Portal</h3>
+        <p class="muted">Relocation portal with planner & reimbursements; Angular + .NET Core APIs.</p>
+      </div>
+      <div class="p">
+        <h3>Facilisight (BMS) & Terminal Mgmt</h3>
+        <p class="muted">Building management & remote device ops; Node/Mongo + Angular; device reporting at scale.</p>
+      </div>
+      <div class="p">
+        <h3>GenAI: BRD DocBot & Summarizer</h3>
+        <p class="muted">RAG over policy/BRD docs with citations; summarization pipelines for faster decisions.</p>
+      </div>
     </section>
 
-    <section>
-      <h2>Stack</h2>
-      <ul>
-        <li>.NET 8 Minimal APIs • Angular 17 • Azure (AI Search, Functions, Key Vault) • SQL/EF Core • Redis</li>
-        <li>RAG (hybrid search), function calling, prompt registry & versions, <strong>guardrails</strong>, <strong>audit</strong></li>
-        <li>Serilog + OpenTelemetry • Docker • CI/CD (Azure DevOps/GitHub Actions)</li>
-      </ul>
+    <section class="card faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>How do you keep our data safe?</summary>
+        <p>BYO-key; domain allow-lists; PII redaction; per-tenant quotas; and a tamper-evident audit log. No training on your private data.</p>
+      </details>
+      <details>
+        <summary>Do we own the code?</summary>
+        <p>Yes—client-owned deliverables with a standard SoW. Models/providers are swappable to avoid lock-in.</p>
+      </details>
+      <details>
+        <summary>What’s the typical pilot timeline?</summary>
+        <p>Week 1 ingest; Week 2 prototype; Week 3 tuning; Week 4 handover & metrics with acceptance tests.</p>
+      </details>
     </section>
 
-    <section>
+    <section class="card">
       <h2>Contact</h2>
-      <p>Best way to reach me: <a href="mailto:k.sharmila17@gmail.com">k.sharmila17@gmail.com</a> •
-        <a href="https://www.linkedin.com/in/sharmila-krishnakumar-176b3919" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p class="muted">Click to reveal (reduces scraping). Or message on LinkedIn.</p>
+      <div class="contact-row">
+        <span class="pill">📧 <span id="emailText">Reveal email</span></span>
+        <button class="copy" id="copyEmail" aria-label="Copy email" disabled>Copy</button>
+
+        <span class="pill">💬 <span id="waText">Reveal WhatsApp</span></span>
+        <button class="copy" id="copyWa" aria-label="Copy WhatsApp" disabled>Copy</button>
+
+        <a class="btn outline" href="/sharmila.vcf" download>Download vCard</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="y"></span> Sharmila Krishnakumar · This page is intentionally public & indexable.</p>
+    <div class="container">
+      <p>© <span id="y"></span> Sharmila Krishnakumar • Public & indexable • <a href="https://www.linkedin.com/in/sharmila-krishnakumar-176b3919" rel="me">LinkedIn</a></p>
+    </div>
   </footer>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    // Theme toggle with localStorage
+    (function(){
+      const root = document.documentElement;
+      const key = "theme";
+      const saved = localStorage.getItem(key);
+      if(saved === "light"){ root.classList.add("light"); }
+      document.getElementById("modeToggle").addEventListener("click", ()=>{
+        root.classList.toggle("light");
+        localStorage.setItem(key, root.classList.contains("light") ? "light" : "dark");
+      });
+    })();
+
+    // Safe contact reveal + working buttons
+    (function(){
+      const eUser = "k.sharmila17"; // your email user
+      const eDom = "gmail.com";     // your email domain
+      const waCtry = "91";
+      const waNum = "9952101495";   // business number recommended
+
+      const emailText = document.getElementById("emailText");
+      const waText = document.getElementById("waText");
+      const emailBtn = document.getElementById("emailBtn");
+      const whatsBtn = document.getElementById("whatsBtn");
+      const copyEmail = document.getElementById("copyEmail");
+      const copyWa = document.getElementById("copyWa");
+
+      function setEmail(){
+        const e = eUser + "@" + eDom;
+        emailText.textContent = e;
+        emailBtn.href = "mailto:" + e + "?subject=Discovery%20call&body=Hi%20Sharmila%2C%20we'd%20like%20to%20discuss%20a%203-4%20week%20pilot.";
+        copyEmail.disabled = false;
+      }
+      function setWa(){
+        const link = "https://wa.me/" + waCtry + waNum + "?text=Hi%20Sharmila%20%E2%80%94%2020-min%20discovery%20call%20about%20GenAI%20pilot.";
+        waText.textContent = "+" + waCtry + "-" + waNum;
+        whatsBtn.href = link;
+        copyWa.disabled = false;
+      }
+      emailText.addEventListener("click", setEmail);
+      waText.addEventListener("click", setWa);
+      copyEmail.addEventListener("click", ()=>{ navigator.clipboard.writeText(emailText.textContent); copyEmail.textContent="Copied"; });
+      copyWa.addEventListener("click", ()=>{ navigator.clipboard.writeText(waText.textContent); copyWa.textContent="Copied"; });
+
+      emailBtn.addEventListener("mouseover", setEmail, { once:true });
+      whatsBtn.addEventListener("mouseover", setWa, { once:true });
+    })();
+
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
