@@ -1,14 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#0b0f14"/>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e7ff;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#g)"/>
-  <text x="72" y="160" fill="#5fd4ff" font-family="Inter, Arial, sans-serif" font-size="42">Sharmila Krishnakumar</text>
-  <text x="72" y="220" fill="#e6f0ff" font-family="Inter, Arial, sans-serif" font-size="30">GenAI • .NET • Angular • Azure — Independent Consultant</text>
-  <text x="72" y="300" fill="#e6f0ff" font-family="Inter, Arial, sans-serif" font-size="26">Pilots in 3–4 weeks • citations • guardrails • KPIs</text>
-  <text x="72" y="370" fill="#9bb0c6" font-family="Inter, Arial, sans-serif" font-size="24">Support/ITSM Copilot • Vendor Discovery Agent</text>
-  <text x="72" y="450" fill="#5fd4ff" font-family="Inter, Arial, sans-serif" font-size="22">https://ksharmila17.github.io/</text>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="60" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1100" cy="530" r="80" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="1000" cy="150" r="40" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="200" cy="500" r="30" fill="rgba(255,255,255,0.1)"/>
+  
+  <!-- Main content area -->
+  <rect x="80" y="80" width="1040" height="470" rx="20" fill="rgba(255,255,255,0.95)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  
+  <!-- Name -->
+  <text x="600" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="url(#textGradient)">
+    Sharmila Krishnakumar
+  </text>
+  
+  <!-- Title -->
+  <text x="600" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" text-anchor="middle" fill="#1e40af">
+    GenAI Consultant — Independent
+  </text>
+  
+  <!-- Tagline -->
+  <text x="600" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="500" text-anchor="middle" fill="#374151">
+    Ships in 3–4 weeks • answers show sources • safe by design
+  </text>
+  
+  <!-- Features -->
+  <g transform="translate(600, 380)">
+    <rect x="-200" y="-10" width="400" height="60" rx="30" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+    <text x="0" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="500" text-anchor="middle" fill="#374151">
+      ✓ Fast Delivery  ✓ Source Attribution  ✓ Safety Controls  ✓ Measurable Outcomes
+    </text>
+  </g>
+  
+  <!-- URL -->
+  <text x="600" y="500" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#6b7280">
+    https://ksharmila17.github.io/
+  </text>
+  
+  <!-- Accent line -->
+  <rect x="400" y="520" width="400" height="4" rx="2" fill="url(#textGradient)"/>
 </svg>

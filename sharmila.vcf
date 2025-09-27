@@ -1,9 +1,10 @@
 BEGIN:VCARD
 VERSION:3.0
-N:Krishnakumar;Sharmila;;;
 FN:Sharmila Krishnakumar
+N:Krishnakumar;Sharmila;;;
+TITLE:GenAI Consultant
 ORG:Independent Consultant
-TITLE:GenAI • .NET • Angular • Azure
 EMAIL:k.sharmila17@gmail.com
 URL:https://ksharmila17.github.io/
+NOTE:Independent Consultant delivering GenAI pilots with clear outcomes: answers with sources, safety controls, and fast delivery in 3–4 weeks.
 END:VCARD
