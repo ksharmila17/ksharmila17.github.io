@@ -1,362 +1,271 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<title>Sharmila Krishnakumar — GenAI • .NET • Angular • Azure (Independent Consultant)</title>
-<style>
-:root {
-  --bg: #0b1020;
-  --bg-2: #0e1326;
-  --card: rgba(255,255,255,0.06);
-  --card-2: rgba(255,255,255,0.10);
-  --text: #e6e9f2;
-  --muted: #a8b0c7;
-  --accent: #7c5cff;
-  --accent-2: #3dd7ff;
-  --ok: #35d07f;
-  --warn: #ffb020;
-  --danger: #ff5c80;
-  --ring: rgba(124,92,255,.35);
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #f7f8fc;
-    --bg-2: #edf0ff;
-    --card: rgba(255,255,255,0.85);
-    --card-2: rgba(255,255,255,0.92);
-    --text: #141b2d;
-    --muted: #4a5776;
-    --accent: #5c3dff;
-    --accent-2: #00a2c7;
-    --ring: rgba(92,61,255,.25);
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sharmila Krishnakumar — GenAI • Full-Stack (.NET + Angular) • Azure</title>
+  <meta name="description" content="Independent Consultant delivering GenAI pilots (citations, guardrails, KPIs) and full-stack .NET + Angular solutions on Azure. Support/ITSM & Procurement use cases that ship in 3–4 weeks." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://ksharmila17.github.io/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sharmila Krishnakumar — GenAI • .NET • Angular • Azure">
+  <meta property="og:description" content="GenAI pilots in 3–4 weeks • citations • guardrails • KPIs • .NET + Angular on Azure.">
+  <meta property="og:url" content="https://ksharmila17.github.io/">
+  <meta property="og:image" content="https://ksharmila17.github.io/og-card.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- JSON-LD Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sharmila Krishnakumar",
+    "jobTitle": "Independent Consultant — GenAI • Full-Stack (.NET + Angular) • Azure",
+    "url": "https://ksharmila17.github.io/",
+    "sameAs": ["https://www.linkedin.com/in/sharmila-krishnakumar-176b3919"],
+    "knowsAbout": ["Generative AI","RAG","Support/ITSM","Procurement","Vendor Discovery",".NET 8","Angular 17","Azure","OpenTelemetry","Redis","SQL"]
   }
-}
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--text);
-  background:
-    radial-gradient(1200px 600px at 80% -10%, var(--accent-2) 0%, transparent 40%),
-    radial-gradient(1000px 500px at -10% 20%, var(--accent) 0%, transparent 35%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
-  min-height: 100vh;
-}
-a { color: var(--accent-2); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.container {
-  max-width: 1080px;
-  width: 92%;
-  margin: 0 auto;
-}
-/* Header / Nav */
-.header {
-  position: sticky; top: 0; z-index: 50;
-  backdrop-filter: saturate(180%) blur(8px);
-  background: linear-gradient(180deg, rgba(10,15,30,.8), rgba(10,15,30,.35));
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-.header .nav {
-  display: flex; align-items: center; justify-content: space-between;
-  height: 64px;
-}
-.brand {
-  font-weight: 700; letter-spacing: .3px; font-size: 16px;
-}
-.nav a.btn {
-  display: inline-block; padding: 10px 14px; border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: white; font-weight: 600; border: none;
-  box-shadow: 0 8px 24px rgba(124,92,255,.25);
-}
-.nav-links a {
-  margin-left: 18px; font-weight: 500; color: var(--muted);
-}
-.nav-links a:hover { color: var(--text); }
-/* Hero */
-.hero {
-  padding: 72px 0 36px;
-}
-.hero-card {
-  display: grid; grid-template-columns: 1fr; gap: 18px;
-  background: linear-gradient(180deg, var(--card-2), var(--card));
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 20px; padding: 28px;
-  box-shadow: 0 12px 40px rgba(0,0,0,.25);
-}
-.hero h1 {
-  margin: 0 0 8px; font-size: clamp(28px, 4vw, 42px); line-height: 1.1; letter-spacing: -.2px;
-}
-.hero .sub {
-  color: var(--muted); font-size: 16px; line-height: 1.6; margin-bottom: 16px;
-}
-.hero .cta {
-  display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px;
-}
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 12px 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.04); color: var(--text); font-weight: 600;
-}
-.btn.primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  border: 0; color: white; box-shadow: 0 10px 30px var(--ring);
-}
-.btn:hover { transform: translateY(-1px); transition: .2s ease; }
-/* Sections as beautiful cards */
-section.card {
-  background: linear-gradient(180deg, var(--card-2), var(--card));
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 18px;
-  padding: 22px 22px 6px;
-  margin: 24px 0;
-  box-shadow: 0 12px 34px rgba(0,0,0,.20);
-}
-section.card h2 {
-  margin: 4px 0 12px; font-size: 20px; letter-spacing: .2px;
-}
-/* Grids */
-.grid-2 { display: grid; grid-template-columns: 1fr; gap: 14px; }
-.grid-3 { display: grid; grid-template-columns: 1fr; gap: 14px; }
-@media (min-width: 820px) {
-  .grid-2 { grid-template-columns: 1fr 1fr; }
-  .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
-}
-/* Project entries */
-.p h3 { margin: 8px 0; font-size: 18px; }
-.p ul { margin: 8px 0 16px 18px; color: var(--muted); }
-.p li + li { margin-top: 4px; }
-/* Badges */
-.badges { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
-.badge {
-  padding:6px 10px; border-radius:999px; font-size:12px; font-weight:600; color:#fff;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 8px 20px var(--ring);
-}
-/* FAQ accordion (accessible details/summary) */
-.faq details {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 12px; padding: 12px 14px; margin: 10px 0;
-}
-.faq summary { cursor: pointer; font-weight: 600; }
-/* Footer */
-footer {
-  color: var(--muted); text-align:center; padding: 28px 0 50px;
-}
-/* Subtle reveal animation */
-.reveal { opacity:0; transform: translateY(8px); transition: all .6s cubic-bezier(.2,.8,.2,1); }
-.reveal.in { opacity:1; transform: translateY(0); }
-</style>
+  </script>
+
+  <style>
+    :root{
+      --bg:#070b12; --panel:#0d1420; --ink:#e6f0ff; --muted:#9bb0c6;
+      --line:#1c2a3a; --brand:#5fd4ff; --brand2:#00d4ae; --chip:#132131;
+      --radius:16px;
+    }
+    :root.light{
+      --bg:#f7fafc; --panel:#ffffff; --ink:#0a1623; --muted:#4b5c6e;
+      --line:#d6e0ea; --brand:#0066ff; --brand2:#00b894; --chip:#eef5ff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--ink); background:
+        radial-gradient(1000px 700px at 10% -20%, #0f172a 0%, transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg));
+      line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    a{color:var(--brand); text-decoration:none}
+    .container{max-width:1140px; margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(6px);
+      background:linear-gradient(180deg, rgba(12,18,30,.9), rgba(12,18,30,.6));
+      border-bottom:1px solid var(--line);
+    }
+    nav{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:10px}
+    .brand .dot{width:12px; height:12px; border-radius:999px; background:linear-gradient(90deg,var(--brand),var(--brand2))}
+    .navlinks a{margin-left:14px; color:var(--muted)}
+    .toggle{border:1px solid var(--line); background:transparent; color:var(--ink); padding:6px 10px; border-radius:12px; cursor:pointer}
+    .hero{padding:38px 0 8px}
+    h1{margin:6px 0 10px; font-size:42px; line-height:1.1}
+    .lead{color:var(--muted); font-size:18px; max-width:860px}
+    .cta{margin:18px 0 6px; display:flex; gap:12px; flex-wrap:wrap}
+    .btn{background:linear-gradient(90deg, var(--brand), var(--brand2)); color:#001018; padding:10px 16px; border-radius:12px; font-weight:600}
+    .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line)}
+    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .chip{background:var(--chip); color:var(--muted); border:1px solid var(--line); padding:6px 10px; border-radius:999px; font-size:12px}
+    main{padding:26px 0 80px}
+    section{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--line); border-radius:var(--radius); padding:22px; margin:18px 0}
+    h2{margin:6px 0 12px; font-size:24px}
+    h3{margin:12px 0 6px; font-size:18px}
+    .grid-2{display:grid; grid-template-columns:1fr; gap:16px}
+    .grid-3{display:grid; grid-template-columns:1fr; gap:16px}
+    @media(min-width:900px){ .grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:1fr 1fr 1fr} }
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    .card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:16px}
+    .muted{color:var(--muted)}
+    .tag{display:inline-block; font-size:12px; padding:3px 8px; border:1px solid var(--line); border-radius:999px; margin-left:6px}
+    .timeline{display:grid; gap:12px}
+    .step{display:flex; gap:12px; align-items:flex-start}
+    .step .n{width:28px; height:28px; border-radius:999px; background:var(--chip); display:grid; place-items:center; font-weight:700; border:1px solid var(--line)}
+    .contact-row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .pill{display:inline-flex; align-items:center; gap:8px; border:1px dashed var(--line); padding:8px 12px; border-radius:999px}
+    .copy{border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:10px; padding:6px 10px; cursor:pointer}
+    footer{border-top:1px solid var(--line); padding:18px 0; color:var(--muted); font-size:14px}
+    a.btn, .card, .chip{transition:transform .12s ease, box-shadow .12s ease}
+    a.btn:hover, .card:hover{transform:translateY(-1px)}
+  </style>
 </head>
 <body>
-<header class="header">
-<div class="container nav">
-<div class="brand">Independent Consultant — GenAI • .NET • Angular</div>
-<nav class="nav-links">
-<a href="#projects">Projects</a>
-<a href="#capabilities">Capabilities</a>
-<a href="#faq">FAQ</a>
-<a class="btn" href="#contact">Contact</a>
-</nav>
-</div>
-</header>
-<section class="hero">
-<div class="container hero-card reveal">
-<div>
-<h1>Sharmila Krishnakumar</h1>
-<div class="sub">I ship enterprise-ready GenAI assistants and modern .NET + Angular apps with citations, guardrails, and measurable KPIs.</div>
-<div class="badges">
-<span class="badge">Citations &amp; Guardrails</span>
-<span class="badge">RAG &amp; Function Calling</span>
-<span class="badge">.NET 8 • Angular 17</span>
-<span class="badge">Observability &amp; DevOps</span>
-</div>
-<div class="cta" style="margin-top:14px;">
-<a class="btn primary" href="#contact">Book 20‑min Discovery</a>
-<a class="btn" href="#projects">See Work</a>
-</div>
-</div>
-</div>
-</section>
-<main class="container">
-<a class="skip" href="#main">Skip to content</a>
-<header>
-<div class="container">
-<nav aria-label="Primary">
-<div class="brand">
-<span class="badge">Independent Consultant — GenAI • .NET • Angular • Azure</span>
-</div>
-<button aria-label="Toggle color theme" class="toggle" id="modeToggle">☀︎/☾</button>
-</nav>
-<div class="hero" role="banner">
-<h1>Sharmila Krishnakumar</h1>
-<p class="lead">
-          I help <strong>Support</strong> and <strong>Procurement</strong> teams ship GenAI assistants in <strong>3–4 weeks</strong> — with
-          <strong>citations</strong>, <strong>guardrails</strong>, and <strong>measurable KPIs</strong>. Typical outcomes: AHT ↓ 15–25%,
-          200+ vendors shortlisted in weeks.
-        </p>
-<div aria-label="Primary actions" class="cta" role="group">
-<a class="btn" href="#" id="emailBtn" rel="nofollow">Email me</a>
-<a class="btn outline" href="https://www.linkedin.com/in/sharmila-krishnakumar-176b3919" rel="me noopener" target="_blank">LinkedIn</a>
-<a class="btn outline" href="#" id="whatsBtn" rel="nofollow">WhatsApp</a>
-</div>
-<div aria-label="Proof metrics" class="chips">
-<span class="chip">Citations-on answers</span>
-<span class="chip">BYO-key &amp; allow-lists</span>
-<span class="chip">Audit logs + PII redaction</span>
-</div>
-</div>
-</div>
-</header>
-<main class="container" id="main">
-<section class="card">
-<h2>About</h2>
-<p class="muted">Solutions architect with 16 years in .NET and Azure, now focused on shipping secure GenAI features fast—RAG with citations, ticket summarization, and sourcing automation—on a clean .NET + Angular stack.</p>
-</section>
-<section class="card">
-<h2>Productized Pilots (fixed-scope, 3–4 weeks)</h2>
-<div class="grid-2">
-<div>
-<h3>Support/ITSM Copilot</h3>
-<p class="muted">Answers with citations, ticket summaries, reply drafts (tone &amp; policy safe).</p>
-<ul>
-<li><strong>Data</strong>: 30–100 KB docs, 200–1000 tickets (CSV/JSON)</li>
-<li><strong>Acceptance</strong>: ≥85% answers include a source; summaries ≤ 8s p95; audit &amp; safety on</li>
-<li><strong>Stack</strong>: .NET 8, Angular 17, Azure AI Search/pgvector, Redis, SQL</li>
-</ul>
-</div>
-<div>
-<h3>Vendor Discovery Agent</h3>
-<p class="muted">Find &amp; triage suppliers; extract contacts; dedupe; GST/coverage flags; CSV export.</p>
-<ul>
-<li><strong>Data</strong>: target categories/regions, seed list (optional)</li>
-<li><strong>Acceptance</strong>: ≥200 vendors; phone/email precision ≥85%; duplicates &lt;5%</li>
-<li><strong>Stack</strong>: Python/.NET, crawler+LLM IE, review UI, audit log</li>
-</ul>
-</div>
-</div>
-</section>
-<section class="card projects" id="projects">
-<h2>Featured Projects</h2>
-<div class="p">
-<h3>KPMG Learning Registration Portals</h3>
-<ul>
-<li><strong>Role:</strong> Solutions Architect &amp; Lead Dev</li>
-<li><strong>Problem:</strong> Peak enrollments caused slow submissions and intermittent failures.</li>
-<li><strong>Approach:</strong> Idempotent APIs, queue-backed writes, server-side validation, structured logging and dashboards.</li>
-<li><strong>Stack:</strong> Angular • .NET Web API • Azure SQL • Redis • Azure DevOps</li>
-<li><strong>Highlights:</strong> Stabilized peak traffic, clearer error surfaces, cleaner CI/CD.</li>
-</ul>
-</div>
-<div class="p">
-<h3>SIRVA Connect+ Employee Portal</h3>
-<ul>
-<li><strong>Role:</strong> Senior Engineer (Frontend &amp; API)</li>
-<li><strong>Scope:</strong> Relocation planner, reimbursements, document workflows.</li>
-<li><strong>Approach:</strong> Modular Angular app with lazy routes, API versioning, secure file handling.</li>
-<li><strong>Stack:</strong> Angular • .NET Core APIs • SQL • Object Storage</li>
-<li><strong>Highlights:</strong> Faster page loads, improved form reliability, clearer audit trails.</li>
-</ul>
-</div>
-<div class="p">
-<h3>Facilisight (BMS) &amp; Terminal Management</h3>
-<ul>
-<li><strong>Role:</strong> Frontend Lead</li>
-<li><strong>Problem:</strong> Device telemetry and remote ops needed robust dashboards and alerting.</li>
-<li><strong>Approach:</strong> Real‑time views, pagination/virtual scroll, batched API access; incident summaries.</li>
-<li><strong>Stack:</strong> Angular • Node • MongoDB</li>
-<li><strong>Highlights:</strong> Stable at scale, clearer incident handling, better operator UX.</li>
-</ul>
-</div>
-<div class="p">
-<h3>GenAI: BRD DocBot &amp; Summarizer</h3>
-<ul>
-<li><strong>Role:</strong> IC / Architect</li>
-<li><strong>Scope:</strong> RAG over policy/BRD documents with citations; brief summaries for decision makers.</li>
-<li><strong>Approach:</strong> Hybrid retrieval (BM25+vector), function calling, prompt registry, audit log.</li>
-<li><strong>Stack:</strong> .NET 8 • Angular 17 • Azure AI Search/pgvector • Redis • SQL</li>
-<li><strong>Highlights:</strong> Answers with sources, safe by default (PII redaction, allow‑lists).</li>
-</ul>
-</div>
-<section class="card" id="capabilities">
-<h2>Capabilities &amp; Strengths</h2>
-<div class="grid-2">
-<div>
-<h3>GenAI (Enterprise‑ready)</h3>
-<ul>
-<li>RAG with citations, function/tool calling</li>
-<li>Guardrails: PII redaction, domain allow‑lists, quotas</li>
-<li>Audit logs; prompt/version registry</li>
-</ul>
-</div>
-<div>
-<h3>.NET &amp; Angular Delivery</h3>
-<ul>
-<li>Minimal APIs, EF Core, Redis caching</li>
-<li>Angular OnPush, lazy routes, interceptors</li>
-<li>Observability: Serilog + OpenTelemetry</li>
-</ul>
-</div>
-<div>
-<h3>Security &amp; Compliance</h3>
-<ul>
-<li>OIDC/OAuth2, PKCE, role/claim checks</li>
-<li>Secrets in Key Vault; TLS; input validation</li>
-<li>Client‑owned IP, model/provider swapability</li>
-</ul>
-</div>
-<div>
-<h3>DevOps &amp; Delivery</h3>
-<ul>
-<li>Docker multi‑stage, CI/CD (Azure DevOps/GitHub)</li>
-<li>Blue/green deploys, feature flags</li>
-<li>Runbooks, acceptance tests, handover</li>
-</ul>
-</div>
-</div>
-</section>
-</section>
-<section class="card faq" id="faq">
-<h2>FAQ</h2>
-<details>
-<summary>How do you keep our data safe?</summary>
-<p>BYO-key; domain allow-lists; PII redaction; per-tenant quotas; and a tamper-evident audit log. No training on your private data.</p>
-</details>
-<details>
-<summary>Do we own the code?</summary>
-<p>Yes—client-owned deliverables with a standard SoW. Models/providers are swappable to avoid lock-in.</p>
-</details>
-<details>
-<summary>What’s the typical pilot timeline?</summary>
-<p>Week 1 ingest; Week 2 prototype; Week 3 tuning; Week 4 handover &amp; metrics with acceptance tests.</p>
-</details>
-</section>
-<section class="card">
-<h2>Contact</h2>
-<p class="muted">Click to reveal (reduces scraping). Or message on LinkedIn.</p>
-<div class="contact-row">
-<span class="pill">📧 <span id="emailText">Reveal email</span></span>
-<button aria-label="Copy email" class="copy" disabled="" id="copyEmail">Copy</button>
-<span class="pill">💬 <span id="waText">Reveal WhatsApp</span></span>
-<button aria-label="Copy WhatsApp" class="copy" disabled="" id="copyWa">Copy</button>
-<a class="btn outline" download="" href="/sharmila.vcf">Download vCard</a>
-</div>
-</section>
-</main>
-<footer>
-<div class="container">
-<p>© <span id="y"></span> Sharmila Krishnakumar • Public &amp; indexable • <a href="https://www.linkedin.com/in/sharmila-krishnakumar-176b3919" rel="me">LinkedIn</a></p>
-</div>
-</footer>
-<script>
-    // Theme toggle with localStorage
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <strong>Sharmila Krishnakumar</strong>
+          <span class="tag">GenAI</span><span class="tag">.NET</span><span class="tag">Angular</span><span class="tag">Azure</span>
+        </div>
+        <div class="navlinks" role="navigation">
+          <a href="#offers">Offers</a>
+          <a href="#usecases">GenAI Use-Cases</a>
+          <a href="#projects">Projects</a>
+          <a href="#process">Process</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <button class="toggle" id="modeToggle" aria-label="Toggle color theme">☀︎/☾</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container hero" role="banner">
+    <h1>GenAI + Full-Stack Delivery that Ships in 3–4 Weeks</h1>
+    <p class="lead">
+      I help <strong>Support</strong> and <strong>Procurement</strong> teams roll out
+      <strong>enterprise-safe GenAI features</strong> — with <strong>citations</strong>, <strong>guardrails</strong>, and <strong>clear KPIs</strong> —
+      on a clean <strong>.NET + Angular</strong> stack running on <strong>Azure</strong>.
+    </p>
+    <div class="cta" role="group" aria-label="Primary actions">
+      <a class="btn" id="emailBtn" href="#" rel="nofollow">Email me</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/sharmila-krishnakumar-176b3919" target="_blank" rel="me noopener">LinkedIn</a>
+      <a class="btn ghost" id="whatsBtn" href="#" rel="nofollow">WhatsApp</a>
+    </div>
+    <div class="chips" aria-label="Trust cues">
+      <span class="chip">Citations-on answers</span>
+      <span class="chip">BYO-key & allow-lists</span>
+      <span class="chip">Audit logs • PII redaction</span>
+      <span class="chip">.NET 8 • Angular 17 • Azure</span>
+    </div>
+  </div>
+
+  <main class="container" id="main">
+    <section id="offers">
+      <h2>Productized Offers (fixed-scope pilots)</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Support / ITSM Copilot <span class="tag">3–4 weeks</span></h3>
+          <p class="muted">Answers with <strong>citations</strong>, <strong>ticket summaries</strong>, and <strong>reply drafts</strong> (tone & policy safe).</p>
+          <ul>
+            <li><strong>Data</strong>: 30–100 KB docs, 200–1000 tickets (CSV/JSON)</li>
+            <li><strong>Acceptance</strong>: ≥85% answers have a source; summaries ≤ 8s p95; audit & safety on</li>
+            <li><strong>Stack</strong>: .NET 8 • Angular 17 • Azure AI Search/pgvector • Redis • SQL</li>
+            <li><strong>Price</strong>: from ₹2.2–₹3.0L</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Vendor Discovery Agent <span class="tag">3–4 weeks</span></h3>
+          <p class="muted">Find & triage suppliers; extract contacts; dedupe; <strong>GST/coverage flags</strong>; CSV export.</p>
+          <ul>
+            <li><strong>Data</strong>: target categories/regions; seed list (optional)</li>
+            <li><strong>Acceptance</strong>: ≥200 vendors; phone/email precision ≥85%; duplicates &lt;5%</li>
+            <li><strong>Stack</strong>: Python/.NET crawler + LLM IE • review UI • audit log</li>
+            <li><strong>Price</strong>: from ₹2.2–₹3.5L</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="usecases">
+      <h2>Popular GenAI Use-Cases (add-ons you can pick)</h2>
+      <div class="grid-3">
+        <div class="card"><h3>RFP / Proposal Assistant</h3><p class="muted">Draft sections from past proposals; compare vendor responses; flag risks & gaps.</p></div>
+        <div class="card"><h3>Policy / Contract Clause Q&amp;A</h3><p class="muted">Clause lookup with citations; due-diligence checklists; exportable notes.</p></div>
+        <div class="card"><h3>Ticket Triage &amp; Macro Drafts</h3><p class="muted">Auto-labels, priority hints, and safe macro drafts to speed up resolution.</p></div>
+        <div class="card"><h3>AP / Invoice Triage (Lite)</h3><p class="muted">Summarize disputes, detect mismatches, and route to the right approver.</p></div>
+        <div class="card"><h3>Exception Console (CSV-first)</h3><p class="muted">Classify delays/NDRs, summarize SOP next-steps; export to share with customers.</p></div>
+        <div class="card"><h3>KB Migration &amp; Cleanup</h3><p class="muted">Deduplicate articles, standardize templates, and improve retrieval quality.</p></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects (anonymized)</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Global Professional Services Firm — Learning Registration Portals</h3>
+          <ul class="muted">
+            <li><strong>Role:</strong> Solutions Architect & Lead Dev</li>
+            <li><strong>Problem:</strong> Peak enrollments caused slow submissions & intermittent failures.</li>
+            <li><strong>Approach:</strong> Idempotent APIs, queue-backed writes, server-side validation, structured logging & dashboards.</li>
+            <li><strong>Stack:</strong> Angular • .NET Web API • Azure SQL • Redis • Azure DevOps</li>
+            <li><strong>Highlights:</strong> Stabilized peak traffic, clearer error surfaces, cleaner CI/CD.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Fortune 500 Relocation Platform — Employee Self-Service</h3>
+          <ul class="muted">
+            <li><strong>Role:</strong> Senior Engineer (Frontend & API)</li>
+            <li><strong>Scope:</strong> Planner, reimbursements, document workflows.</li>
+            <li><strong>Approach:</strong> Modular Angular (lazy routes), API versioning, secure file handling.</li>
+            <li><strong>Stack:</strong> Angular • .NET Core APIs • SQL • Object Storage</li>
+            <li><strong>Highlights:</strong> Faster loads, improved form reliability, clearer audit trails.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>IoT Facilities/Terminals — BMS & Remote Device Mgmt</h3>
+          <ul class="muted">
+            <li><strong>Role:</strong> Frontend Lead</li>
+            <li><strong>Problem:</strong> Telemetry & remote ops needed robust dashboards & alerting.</li>
+            <li><strong>Approach:</strong> Real-time views, virtual scroll, batched API access; incident summaries.</li>
+            <li><strong>Stack:</strong> Angular • Node • MongoDB</li>
+            <li><strong>Highlights:</strong> Stable at scale, clearer incident handling, better operator UX.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>GenAI — BRD/Policy DocBot & Summarizer</h3>
+          <ul class="muted">
+            <li><strong>Role:</strong> IC / Architect</li>
+            <li><strong>Scope:</strong> RAG over BRD/policy docs with citations; exec summaries.</li>
+            <li><strong>Approach:</strong> Hybrid retrieval (BM25+vector), function calling, prompt registry, audit log.</li>
+            <li><strong>Stack:</strong> .NET 8 • Angular 17 • Azure AI Search/pgvector • Redis • SQL</li>
+            <li><strong>Highlights:</strong> Answers with sources; safe by default (PII redaction, allow-lists).</li>
+          </ul>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:8px"><em>Work reflects my role & common techniques. Client names, proprietary details, and internal assets are omitted or anonymized.</em></p>
+    </section>
+
+    <section id="process">
+      <h2>How a 4-Week Pilot Works</h2>
+      <div class="timeline">
+        <div class="step"><div class="n">1</div><div><strong>Ingest & Plan.</strong> Gather samples (docs/CSV); define KPI + acceptance tests; secure keys & access.</div></div>
+        <div class="step"><div class="n">2</div><div><strong>Prototype.</strong> Wire RAG/tools; baseline safety (allow-lists, PII redaction); simple UI.</div></div>
+        <div class="step"><div class="n">3</div><div><strong>Tune & Evaluate.</strong> Improve retrieval; add citations test set; measure latency & cost; dashboards.</div></div>
+        <div class="step"><div class="n">4</div><div><strong>Handover.</strong> Demo; runbook; next-phase roadmap or retainer. Client owns deliverables.</div></div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Security & Privacy</h3>
+          <p class="muted">BYO-key, domain allow-lists, PII redaction, per-tenant quotas, and tamper-evident audit logs. No training on your private data.</p>
+        </div>
+        <div class="card">
+          <h3>Lock-in</h3>
+          <p class="muted">Model/provider swappable. Azure-first, but portable design. You own code & infra artifacts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="muted">Click to reveal (reduces scraping). Or message on LinkedIn.</p>
+      <div class="contact-row">
+        <span class="pill">📧 <span id="emailText">Reveal email</span></span>
+        <button class="copy" id="copyEmail" aria-label="Copy email" disabled>Copy</button>
+
+        <span class="pill">💬 <span id="waText">Reveal WhatsApp</span></span>
+        <button class="copy" id="copyWa" aria-label="Copy WhatsApp" disabled>Copy</button>
+
+        <a class="btn ghost" href="/sharmila.vcf" download>Download vCard</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="y"></span> Sharmila Krishnakumar • Public & indexable • <a href="https://www.linkedin.com/in/sharmila-krishnakumar-176b3919" rel="me">LinkedIn</a></p>
+    </div>
+  </footer>
+
+  <script>
     (function(){
       const root = document.documentElement;
       const key = "theme";
@@ -368,12 +277,11 @@ footer {
       });
     })();
 
-    // Safe contact reveal + working buttons
     (function(){
-      const eUser = "k.sharmila17"; // your email user
-      const eDom = "gmail.com";     // your email domain
+      const eUser = "k.sharmila17";
+      const eDom  = "gmail.com";
       const waCtry = "91";
-      const waNum = "9952101495";   // business number recommended
+      const waNum  = "9952101495";
 
       const emailText = document.getElementById("emailText");
       const waText = document.getElementById("waText");
@@ -389,7 +297,7 @@ footer {
         copyEmail.disabled = false;
       }
       function setWa(){
-        const link = "https://wa.me/" + waCtry + waNum + "?text=Hi%20Sharmila%20%E2%80%94%2020-min%20discovery%20call%20about%20GenAI%20pilot.";
+        const link = "https://wa.me/" + waCtry + waNum + "?text=Hi%20Sharmila%20%E2%80%94%2020-min%20discovery%20call%20about%20a%20GenAI%20pilot.";
         waText.textContent = "+" + waCtry + "-" + waNum;
         whatsBtn.href = link;
         copyWa.disabled = false;
@@ -405,37 +313,5 @@ footer {
 
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-<section class="card reveal" id="contact">
-<h2>Contact</h2>
-<p>Prefer email or WhatsApp? Click to reveal.</p>
-<div class="grid-2">
-<button class="btn" data-reveal="email">Reveal Email</button>
-<button class="btn" data-reveal="phone">Reveal WhatsApp</button>
-</div>
-<div id="revealed" style="margin-top:10px;color:var(--muted)"></div>
-</section>
-</main>
-<footer>
-  © Independent Consultant. All rights reserved.
-</footer>
-<script>
-  // Intersection Observer for reveal animation
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('in');
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal, section.card').forEach(el => io.observe(el));
-
-  // Simple reveal for contact
-  const revealed = document.getElementById('revealed');
-  document.querySelectorAll('[data-reveal]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (!revealed) return;
-      if (btn.dataset.reveal === 'email') revealed.textContent = '📧 (hidden by default) — add your email link here';
-      if (btn.dataset.reveal === 'phone') revealed.textContent = '💬 (hidden by default) — add your WhatsApp number here';
-    });
-  });
-</script>
 </body>
 </html>
